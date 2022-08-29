@@ -18,6 +18,15 @@ nextButton.addEventListener("click", () => {
   inputLabels[1].style.display = "block";
 });
 
+//Hiding the table when field value is changed
+amountInputFields[0].addEventListener("input", () => {
+  if (changeTable.style.display === "table") changeTable.style.display = "none";
+});
+
+amountInputFields[1].addEventListener("input", () => {
+  if (changeTable.style.display === "table") changeTable.style.display = "none";
+});
+
 calcButton.addEventListener("click", () => {
   let billAmount = Number(amountInputFields[0].value);
   let cashGiven = Number(amountInputFields[1].value);
