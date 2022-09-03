@@ -20,9 +20,19 @@
 
     <div class="input-wrapper">
       <label>Bill Amount:</label>
-      <input class="bill" type="number" />
+      <input
+        class="bill"
+        type="number"
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+        min="0"
+      />
       <label>Cash Given:</label>
-      <input class="cash" type="number" />
+      <input
+        class="cash"
+        type="number"
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+        min="0"
+      />
       <button class="next-button">Next</button>
       <button class="calc-button">Check</button>
     </div>
