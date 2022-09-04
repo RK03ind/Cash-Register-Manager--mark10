@@ -7,11 +7,11 @@ let calcButton = document.querySelector(".calc-button");
 let changeTable = document.querySelector(".cash-change");
 let tableDataElements = document.querySelectorAll(".notes-count");
 
+//Displaying next input field on next button click
 nextButton.addEventListener("click", () => {
   let billAmount = document.querySelector(".bill").value;
   if (!billAmount) return alert("Enter bill amount to proceed");
 
-  //Displaying next input field on next button click
   calcButton.style.display = "block";
   nextButton.style.display = "none";
   amountInputFields[1].style.display = "inline-block";
@@ -22,11 +22,11 @@ nextButton.addEventListener("click", () => {
 amountInputFields[0].addEventListener("input", () => {
   if (changeTable.style.display === "table") changeTable.style.display = "none";
 });
-
 amountInputFields[1].addEventListener("input", () => {
   if (changeTable.style.display === "table") changeTable.style.display = "none";
 });
 
+//Calculating the change and displaying the table to user
 calcButton.addEventListener("click", () => {
   let billAmount = Number(amountInputFields[0].value);
   let cashGiven = Number(amountInputFields[1].value);
